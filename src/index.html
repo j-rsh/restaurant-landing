@@ -38,6 +38,8 @@
   <link rel="manifest" href="site.webmanifest?v=1.0.0">
   <link rel="mask-icon" href="safari-pinned-tab.svg?v=1.0.0" color="#3c3ce5">
   <link rel="shortcut icon" href="favicon.ico?v=1.0.0">
+  <!-- <link rel="stylesheet" type="text/css" href="./styles/partials/_header.scss"> -->
+
   
   <!-- Tile icon for Win8 (144x144 + tile color) -->
   <meta name="msapplication-TileImage" content="mstile-150x150.png">
@@ -55,12 +57,38 @@
 </head>
 
 <body>
-  <h1>Hi, FROM HTML STARTER KIT</h1>
-  <!-- build:js scripts/vendor.min.js -->
-  <!-- endbuild -->
+ 
+      <div class="main-banner">
+        <nav  class="banner-content">
+          <div class="navbar-content">
+            <img src="../images/restaurant.jpg"/>
 
-  <!-- build:js scripts/main.min.js -->
-  <script src="scripts/main.js"></script>
+            <button data-collapse-toggle="menu" class="hambergur-menu">
+              <img src="../images/ham.svg" width="28" height="28"/>
+            </button>
+            <div class="nav-links" id="menu-links">
+              <ul>
+                <li> <a href="#">why us</a></li>
+                <li> <a href="#">menu</a></li>
+                <li> <a href="#">popular dishes</a> </li>
+                <li> <a href="#">book</a> </li>
+                <li> <a href="#">contact</a> </li>
+              </ul>
+
+            </div>
+
+
+              
+          </div>
+          <div class="main-title">
+            <h1 class="">Book a table in the best 
+              Mexican restaturant</h1>
+              <p class="">30% off for the Christmas</p>
+          </div>
+        </nav>
+      </div>
+
+  <script src="scripts/navbar.js"></script>
   <!-- endbuild -->
 
 </body>

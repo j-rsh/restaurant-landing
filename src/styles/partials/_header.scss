@@ -1,0 +1,126 @@
+
+
+  %navbar-layout {
+    background-image: url('../../../images/banner4.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    
+    .banner-content{
+        width: 100%;
+        position: absolute;
+        top: 5%;
+        color: white;
+     }
+     .navbar-content{
+        display: flex
+     }
+
+     .nav-links{
+        display: contents;
+
+         ul{
+            display: flex;
+            justify-content: space-between;
+            padding-left: 0;
+            list-style:none
+        }
+     }
+    .main-title{
+       text-align: center;
+       width: 50%;
+       margin: auto;
+      
+    }
+    a{
+        text-decoration: none;
+        color: white
+    }
+      
+  }
+
+.main-banner{
+ 
+   @extend %navbar-layout;
+   
+   
+    @include sm {
+     height: 64vh;
+     .navbar-content{
+        justify-content: space-between;
+        align-items: center;
+        margin: 1rem 2rem;
+     }
+     .nav-links{
+      display: none;
+        background-color: beige;
+        position: absolute;
+         top: 0;
+         right: 0;
+         bottom: 0;
+         left: 0;
+        ul{
+            flex-direction: column;
+        }
+     }
+     .hambergur-menu{
+        display: block;
+     }
+    }
+    
+    @include md {
+     height: 62vh;
+     .navbar-content{
+        flex-direction: column;
+        align-items: center;
+     }
+     .nav-links{
+        display: contents;
+
+         ul{
+            width: 50%;
+            flex-direction: row;
+
+         }
+     }
+     h1{
+        font-size: x-large;
+        margin-top: 4rem;
+     }
+     p{ 
+            font-size: small;
+     }
+     .hambergur-menu{
+        display: none!important
+    }
+        
+    }
+    
+    @include lg {
+     height: 100vh;
+     .navbar-content{
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: end;
+     }
+     .nav-links{
+        display: contents;
+
+         ul{
+            width: 27%;
+            flex-direction: row;
+         }
+     }
+     h1{
+        font-size: xxx-large;
+        margin-top: 8rem;
+     }
+     p{ 
+            font-size: medium;
+     }
+     .hambergur-menu{
+        display: none!important
+    }
+        
+    }
+}
