@@ -45,8 +45,7 @@
 
   
   
-  // Responsive adjustments
-  @include md { // Tablet mode
+  @include md {
    .card-container {
       flex-direction: column;
       height: 90vh;
@@ -59,7 +58,7 @@
     }
   }
   
-  @include sm { // Mobile mode
+  @include sm {
     .card-container {
         flex-direction: column;
         height: 100%;
@@ -74,3 +73,45 @@
       }
   }
   
+
+  .menu-list{
+    border: 1px solid #8D8D8D;
+    background: #181110;
+    width: 60%;
+    margin: 3rem auto;
+    color: white;
+
+    li{
+        border-bottom: 1px solid #8D8D8D;
+
+    }
+    li:last-child{
+        border-bottom: none;
+    }
+    .menu-item{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: gray;
+    
+    }
+  
+    
+  }
+  @include md{
+    .menu-list{
+        width:90%
+    }
+  }
+  @include sm{
+    .menu-list{
+        width:100%;
+        text-align: center;
+        .menu-item{
+            flex-direction: column;
+            color: gray;
+            padding-bottom: 0.5rem;
+        }
+    }
+  }
+
