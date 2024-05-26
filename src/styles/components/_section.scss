@@ -3,6 +3,12 @@
     justify-content: center;
     align-items: center;
   }
+
+  @mixin flex-space{
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+  }
   
   // Base styles
   .card-container {
@@ -80,6 +86,10 @@
     width: 60%;
     margin: 3rem auto;
     color: white;
+    .menu-header{
+        @include flex-space;
+        border-bottom:none
+    }
 
     li{
         border-bottom: 1px solid #8D8D8D;
@@ -89,9 +99,7 @@
         border-bottom: none;
     }
     .menu-item{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        @include flex-space;
         color: gray;
     
     }

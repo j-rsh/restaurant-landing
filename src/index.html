@@ -102,10 +102,17 @@
       </div>
 
       <div class="menu-list">
-        <div class="m-3">
+        <div class="m-3 menu-header">
           <h1>Our menu</h1>
+          <div class="menu-tab">
+            <ul class="display-f">
+              <li class="m-1"><a data-toggle="tab" href="#starter">Starter</a></li>
+              <li class="m-1"><a data-toggle="tab" href="#main">Main Dieshes </a></li>
+              <li class="m-1"><a data-toggle="tab" href="#desserts">Desserts </a></li>
+            </ul>
+          </div>
         </div>
-          <ul class="pl-0 m-3 display-n">
+          <ul class="pl-0 m-3 tabcontent" id="#starter">
             <li class="mt-2">
               <h1 class="font-md m-0">Dim Sums</h1>
               <div class="menu-item font-sm m-0">
@@ -135,8 +142,102 @@
               </div>
             </li>
           </ul>
+
+          <!-- <ul class="pl-0 m-3 tabcontent" id="#main">
+            <li class="mt-2">
+              <h1 class="font-md m-0">Dim Sums</h1>
+              <div class="menu-item font-sm m-0">
+                <p>Chestnuts, mushroom, spring onion, ginger, coriander</p>
+                <span>$88</span>
+              </div>
+            </li>
+          </ul>
+
+          <ul class="pl-0 m-3 tabcontent" id="#dessert">
+            <li class="mt-2">
+              <h1 class="font-md m-0">Real Kung Pao chicken</h1>
+              <div class="menu-item font-sm m-0">
+                <p>Peanuts, chicken tights, rice wine, cornflour, soy sauce, chillies</p>
+                <span>$35</span>
+              </div>
+            </li>
+          </ul> -->
       </div>
       
+      <div class="customer-form mt-7">
+        <div class="form-banner">
+          <div class="form-banner-content">
+            <div class="form-title mt-2">
+              <h1 >Book a table</h1>
+              <p class="form-text">
+                When we first opened our restaturant, it didn't take a long time for us to prove our diffrence. 
+              </p>
+           </div>
+            <div class="form-card">
+                  <form class="form">
+                    <div class="form-items">
+                      <label for="name" class="form-label"> Your Name </label>
+                      <input
+                        type="text"
+                        name="name"
+                        class="form-input"
+                      />
+                    </div>
+                    <div class="form-items">
+                      <label for="phone" class="form-label"> Your Phone </label>
+                      <input
+                        type="number"
+                        name="phone"
+                        id="phone"
+                        class="form-input"
+                      />
+                    </div>
+                    <div class="form-items">
+                      <label for="email" class="form-label"> Your Email </label>
+                      <input
+                        type="email"
+                        name="email"
+                        id="email"
+                        class="form-input"
+                      />
+                    </div>
+                    <div class="form-items">
+                      <label for="email" class="form-label"> Date </label>
+                      <input
+                        type="date"
+                        name="date"
+                        id="date"
+                        class="form-input"
+                      />
+                    </div>
+                    <div class="form-items">
+                      <label for="email" class="form-label"> Time </label>
+                      <input
+                        type="time"
+                        name="time"
+                        id="time"
+                        class="form-input"
+                      />
+                    </div>
+                    <div class="form-items">
+                      <label for="email" class="form-label"> Number of people </label>
+                      <input
+                        type="number"
+                        name="number"
+                        id="number"
+                        class="form-input"
+                      />
+                      <div class="form-items">
+                        <button class="book-btn">
+                            Book now
+                      </button>
+                    </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+    </div>
 
   <script src="scripts/navbar.js"></script>
   <!-- endbuild -->

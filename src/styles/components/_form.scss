@@ -1,0 +1,114 @@
+.form-banner{
+    background-image: url('../../../images/banner10.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    height: 100vh;
+
+    .form-banner-content{
+        display: flex;
+        justify-content: space-around;
+        color: white;
+    }
+    .form-card{
+    width: 25%;
+    padding:2rem;
+    border: 1px solid #8D8D8D;
+    background: #181110;
+    color: #ffff;
+    margin-top: -2.5rem;
+    }
+}
+.form{
+    max-width: 400px;
+    margin: 1rem;
+}
+.form-items{
+    margin: 0 auto;
+    margin-bottom: 1rem;
+}
+
+.form-title{
+    width: 354px;
+}
+
+.form-label {
+  display: block;
+  font-weight: 500;
+  font-size: 16px;
+  color: white;
+  margin-bottom: 6px;
+}
+.formbold-form-label-2 {
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.form-input {
+  width: 96%;
+    padding: 12px 6px;
+    border: 1px solid #e0e0e0;
+    background: rgba(255, 255, 255, 0.10);
+    font-weight: 500;
+    font-size: 16px;
+    color: #6b7280;
+    outline: none;
+    resize: none;
+}
+.form-input:focus {
+  border-color: #4c4c4e;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+}
+
+
+
+.formbold--mx-3 {
+  margin-left: -12px;
+  margin-right: -12px;
+}
+.formbold-px-3 {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+@include md{
+    .form-banner-content{
+        
+        flex-direction: column;
+        align-items: center;
+
+        .form-card{
+            width: 50%;
+            margin-top: 0;
+    }
+    .form-title{
+        text-align: center;
+    }
+}
+}
+
+@include sm{
+    .form-banner-content{
+
+        flex-direction: column;
+        align-items: center;
+
+        .form-card{
+            width: 100%;
+            padding:0;
+            margin-top: 0;
+    }
+
+    .form-title{
+        width: 300px;
+        text-align: center;
+
+    }
+    
+    .form{
+        max-width: 300px;
+        margin: 2rem auto;
+        }
+    }
+}   
