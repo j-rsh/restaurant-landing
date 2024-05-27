@@ -1,127 +1,131 @@
 .contact-us {
-    width: 60%;
-    color: white;
-    margin-inline: auto;
-    text-align: center;
-  }
+  width: 60%;
+  color: white;
+  margin-inline: auto;
+  text-align: center;
+}
 
-  h1{
-    text-align: left;
-    position: relative;
-  padding-bottom: 10px;
+h1 {
+  text-align: left;
+  position: relative;
+  padding-bottom: 0.625rem;
 
   &:after {
-    content: '';
-    position: absolute;
-    left: 2rem;
-    bottom: 0;
-    width: 50px; 
-    height: 2px;
-    background-color: orangered;
-    transform: translateX(-50%);
-
+      content: '';
+      position: absolute;
+      left: 2rem;
+      bottom: 0;
+      width: 3.125rem;
+      height: 0.125rem;
+      background-color: orangered;
+      transform: translateX(-50%);
   }
 }
-  
-  .contact-info {
-    display: flex;
-    justify-content: space-around;
-    margin: 20px 0;
-  
-    .contact-item {
+
+.contact-info {
+  display: flex;
+  justify-content: space-around;
+
+  .contact-item {
       margin: 0 0.25rem;
       display: flex;
       align-items: center;
-  
+
       i {
-        font-size: 20px;
-        margin-right: 10px;
-
+          font-size: 1.25rem; 
+          margin-right: 0.625rem; 
       }
-  
+
       p {
-        margin: 0;
-        color: gray;
+          margin: 0;
+          color: gray;
       }
-    }
   }
-  
-  .map {
-    margin: 20px 0;
-  
-    iframe {
-      width: 100%;
-      height: 400px;
+}
 
-    }
+.map {
+  margin: 1.25rem 0;
+
+  iframe {
+      width: 100%;
+      height: 25rem;
   }
-  
-  .open-hours {  
-    h2 {
+}
+
+.open-hours {  
+  h2 {
       margin: 0;
       color: orangered;
       font-size: 0.75rem;
-    }
-  
-    p {
+  }
+
+  p {
       font-size: 1rem;
-    }
   }
-  
-  footer {
-    margin-top: 20px;
-    font-size: 14px;
-    color: white;
-    border-top: 1px solid gray;
-  }
-  
-  @include md{
-    .contact-us{
+}
+
+footer {
+  margin-top: 1.25rem; 
+  font-size: 0.875rem;
+  color: gray;
+  border-top: 0.0625rem solid gray; 
+}
+
+@include md {
+  .contact-us {
       width: 90%;
-      h1{
-        text-align: center;
-        &:after {
-          left: 50%;
-        }
+
+      h1 {
+          text-align: center;
+
+          &:after {
+              left: 50%;
+          }
       }
+
       .contact-info {
-        flex-direction: column;
-        align-items: center;
-        .contact-item {
-          margin: 0.5rem 0;
           flex-direction: column;
           align-items: center;
-        i {
-          margin: 0.5rem 0.25rem;
-  
-        }
+
+          .contact-item {
+              margin: 0.5rem 0;
+              flex-direction: column;
+              align-items: center;
+
+              i {
+                  margin: 0.5rem 0.25rem;
+              }
+          }
       }
-      }
-    }
   }
-  
-  @include sm {
-    .contact-us{
+}
+
+@include sm {
+  .contact-us {
       width: 100%;
-      h1{
-        text-align: center;
-        &:after {
-          left: 50%;
-        }
+
+      h1 {
+          padding-top: 2rem;
+          text-align: center;
+
+          &:after {
+              left: 50%;
+          }
       }
+
       .contact-info {
-        flex-direction: column;
-        align-items: center;
-        .contact-item {
-          margin: 0.5rem 0;
           flex-direction: column;
           align-items: center;
-        i {
-          margin: 0.5rem 0.25rem;
-  
-        }
+
+          .contact-item {
+              margin: 0.5rem 0;
+              flex-direction: column;
+              align-items: center;
+
+              i {
+                  margin: 0.5rem 0.25rem;
+              }
+          }
       }
-      }
-    }
   }
-  
+}
