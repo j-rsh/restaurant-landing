@@ -1,18 +1,17 @@
 .slider-container {
-    background-color: #b72913;;
+    background-color: #181110;
     border: 1px solid #8D8D8D;
     width: 60%;
     margin: 9rem auto;
     color: #fff;
     text-align: left;
 
-    h1 {
-        margin-bottom: 20px;
-        text-align: center;
-        color: #fff;
-    }
+    h1{
+        @include highlighted-underline(left,1rem);
+      }
 
     .slider {
+        margin: 3rem;
         .slider-cell {
          
             padding: 20px;
@@ -20,13 +19,12 @@
             flex-direction: column;
             align-items: center;
             position: relative;
-            height: 700px;  
             width: 100%;
 
             .slider-title{
                 width:100%;
                 display: flex;
-                justify-content: space-around;
+                justify-content: space-between;
             }
 
             .slider-content{
@@ -38,10 +36,9 @@
 
 
             img {
-                max-height: 100%; 
                 margin-right: 20px;
                 width: 55%;
-                height: 50%;
+                height: 100%;
             }
 
             .dish-info {
@@ -62,7 +59,7 @@
 
                 h2 {
                     margin: 0 0 10px 0;
-                    color: #e67e22;
+                    color: white;
                 }
 
                 p {
@@ -97,15 +94,22 @@
 }
 @include md{
     .slider-container{
+            width:90%;
         .slider{
-
             .slider-cell{
     .slider-title{
         width:100%;
         flex-direction: column;
         align-items: center;
+        h1{
+            @include highlighted-underline(center,12rem);
+          }
     }
 
+    .slider-controls{
+        margin-top: 0;
+        margin-bottom: 1rem;
+    }
     .slider-content{
         flex-direction: column;
         align-items: center;
@@ -113,10 +117,14 @@
     }
     img{
         margin-right: 0;
+        width: 90%;
     }
     .dish-info{
         width: 90%;
         text-align: left;
+        margin-top: 3rem;
+        max-height: 230px;
+
 
     }
 }
@@ -126,16 +134,26 @@
 
 @include sm{
     .slider-container{
+        width: 100%;
         .slider{
-
+                margin: 0;
             .slider-cell{
-        
+                left:0.47rem;
+
                 .slider-title{
                     width:100%;
                     flex-direction: column;
                     align-items: center;
+                    h1{
+                        @include highlighted-underline(center,12rem);
+                      }
                 }
-            
+               
+                .slider-controls{
+                    margin-top: 0;
+                    margin-bottom: 1rem;
+                }
+
                 .slider-content{
                     flex-direction: column;
                     align-items: center;
@@ -143,10 +161,12 @@
                 }
                 img{
                     margin-right: 0;
+                    width: 95%;
                 }
                 .dish-info{
-                    width: 90%;
+                    width: 84%;
                     text-align: center;
+                    margin-top:1rem;
             
                 }
             }

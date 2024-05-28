@@ -20,6 +20,9 @@
 @import 'objects/_section.scss';
 
 
+// MIXINS
+@import 'mixins/mixins.scss';
+
 // UTILITIES
 @import 'utilities/_flex.scss';
 @import 'utilities/_spacing.scss';
@@ -31,16 +34,16 @@
 //----------------------------------*\
 // Components
 //----------------------------------*/
-@import 'components/_section.scss';
+@import 'components/_menu.scss';
+@import 'components/_card.scss';
 @import 'components/_button.scss';
 @import 'components/_link.scss';
-@import 'components/form.scss';
-@import 'components/slider.scss';
-
-
-
+@import 'components/_form.scss';
+@import 'components/_slider.scss';
 
 
 // PARTIALS
 @import 'partials/_header.scss';
 @import 'partials/_footer.scss';
+
+

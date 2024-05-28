@@ -3,24 +3,12 @@
   color: white;
   margin-inline: auto;
   text-align: center;
-}
-
-h1 {
-  text-align: left;
-  position: relative;
-  padding-bottom: 0.625rem;
-
-  &:after {
-      content: '';
-      position: absolute;
-      left: 2rem;
-      bottom: 0;
-      width: 3.125rem;
-      height: 0.125rem;
-      background-color: orangered;
-      transform: translateX(-50%);
+  
+  h1{
+    @include highlighted-underline(left,1.25rem);
   }
 }
+
 
 .contact-info {
   display: flex;
@@ -75,12 +63,9 @@ footer {
   .contact-us {
       width: 90%;
 
-      h1 {
-          text-align: center;
-
-          &:after {
-              left: 50%;
-          }
+      h1{
+        @include highlighted-underline(center,6rem);
+      }
       }
 
       .contact-info {
@@ -98,19 +83,13 @@ footer {
           }
       }
   }
-}
 
 @include sm {
   .contact-us {
       width: 100%;
-
-      h1 {
-          padding-top: 2rem;
-          text-align: center;
-
-          &:after {
-              left: 50%;
-          }
+      h1{
+        padding-top: 2rem;
+        @include highlighted-underline(center,9rem);
       }
 
       .contact-info {

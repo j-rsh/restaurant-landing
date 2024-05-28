@@ -30,6 +30,9 @@
 
 .form-title{
     width: 354px;
+    h1{
+        @include highlighted-underline(left,1rem);
+      }
 }
 
 .form-label {
@@ -52,16 +55,41 @@
     background: rgba(255, 255, 255, 0.10);
     font-weight: 500;
     font-size: 16px;
-    color: #6b7280;
+    color: gray;
     outline: none;
     resize: none;
+    position: relative;
+}
+input[type="date"]::-webkit-calendar-picker-indicator ,
+    input[type="time"]::-webkit-calendar-picker-indicator {
+    display: none;
+}
+
+.custom-icon::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: gray;
+    margin-right: 0.25rem; 
+    position: absolute;
+    right: 0.25rem;
+}
+.date::before{
+    content: "\f073";
+}
+.time::before{
+    content: "\f017";
 }
 .form-input:focus {
   border-color: #4c4c4e;
   box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
 }
 
-
+.numeric-input{
+    position: relative;
+    input{
+        text-align: center;
+    }
+}
 
 .formbold--mx-3 {
   margin-left: -12px;
@@ -82,9 +110,11 @@
             width: 50%;
             margin-top: 0;
     }
-    .form-title{
-        text-align: center;
-    }
+}
+.form-title{
+    h1{
+        @include highlighted-underline(center,6rem);
+      }
 }
 }
 
@@ -100,15 +130,18 @@
             margin-top: 0;
     }
 
-    .form-title{
-        width: 300px;
-        text-align: center;
-
-    }
     
     .form{
         max-width: 300px;
         margin: 2rem auto;
-        }
     }
+}
+.form-title{
+    width: 300px;
+    text-align: center;
+    h1{
+        @include highlighted-underline(center,8rem);
+      }
+
+}
 }   

@@ -84,7 +84,7 @@
               
           </div>
           <div class="main-title">
-            <h1 class="">Book a table in the best 
+            <h1>Book a table in the best 
               Mexican restaturant</h1>
               <p class="">30% off for the Christmas</p>
           </div>
@@ -93,10 +93,15 @@
 
       <div class="card-container">
         <div class="card-content">
-            <h2>Title Here</h2>
-            <p>When we first opened our restaturant, it didn't take a long time ofr us to prove our diffrence.</p>
-              <p>Our native chefs, the Chinese atmosphere of the restaturant, the variety of dishes, the high quality of foods, and affordable prices made us well-known very soon. </p>
-              <p>Today, we have customers not only from this area but also from other cities.</p>
+            <h2>Why Customers Like us?</h2>
+            <p>
+              When we first opened our restaturant, it didn't take a long time ofr us to prove our diffrence. 
+
+              Our native chefs, the Chinese atmosphere of the restaturant, the variety of dishes, the high quality of foods, and affordable prices made us well-known very soon. 
+
+              Today, we have customers not only from this area but also from other cities.
+            </p>
+            
         </div>
 
           <div class="card-image">
@@ -109,64 +114,88 @@
           <h1>Our menu</h1>
           <div class="menu-tab">
             <ul class="display-f">
-              <li class="m-1"><a data-toggle="tab" href="#starter">Starter</a></li>
-              <li class="m-1"><a data-toggle="tab" href="#main">Main Dieshes </a></li>
-              <li class="m-1"><a data-toggle="tab" href="#desserts">Desserts </a></li>
-            </ul>
+              <li class="m-1"><a href="#starter" class="tab-links" onclick="openTab(event, 'starter')">Starter</a></li>
+              <li class="m-1"><a href="#main" class="tab-links" onclick="openTab(event, 'main')">Main Dishes</a></li>
+              <li class="m-1"><a href="#desserts" class="tab-links" onclick="openTab(event, 'desserts')">Desserts</a></li>
+          </ul>
           </div>
         </div>
-          <ul class="pl-0 m-3 tabcontent" id="#starter">
-            <li class="mt-2">
-              <h1 class="font-md m-0">Dim Sums</h1>
-              <div class="menu-item font-sm m-0">
-                <p>Chestnuts, mushroom, spring onion, ginger, coriander</p>
-                <span>$88</span>
-              </div>
-            </li>
-            <li class="mt-2">
-              <h1 class="font-md m-0">Real Kung Pao chicken</h1>
-              <div class="menu-item font-sm m-0">
-                <p>Peanuts, chicken tights, rice wine, cornflour, soy sauce, chillies</p>
-                <span>$35</span>
-              </div>
-            </li>
-            <li class="mt-2">
-              <h1 class="font-md m-0">Dim Sums</h1>
-              <div class="menu-item font-sm m-0">
-                <p>Chestnuts, mushroom, spring onion, ginger, coriander</p>
-                <span>$88</span>
-              </div>
-            </li>
-            <li class="mt-2">
-              <h1 class="font-md m-0">Real Kung Pao chicken</h1>
-              <div class="menu-item font-sm m-0">
-                <p>Peanuts, chicken tights, rice wine, cornflour, soy sauce, chillies</p>
-                <span>$35</span>
-              </div>
-            </li>
-          </ul>
+       <div class="tab-content">
+
+         <ul class="pl-0 m-3 " id="starter">
+           <li class="mt-2">
+             <h1 class="font-md m-0">Dim Sums</h1>
+             <div class="menu-item font-sm m-0">
+               <p>Chestnuts, mushroom, spring onion, ginger, coriander</p>
+               <span>$88</span>
+             </div>
+           </li>
+           <li class="mt-2">
+             <h1 class="font-md m-0">Real Kung Pao chicken</h1>
+             <div class="menu-item font-sm m-0">
+               <p>Peanuts, chicken tights, rice wine, cornflour, soy sauce, chillies</p>
+               <span>$35</span>
+             </div>
+           </li>
+           <li class="mt-2">
+             <h1 class="font-md m-0">Dim Sums</h1>
+             <div class="menu-item font-sm m-0">
+               <p>Chestnuts, mushroom, spring onion, ginger, coriander</p>
+               <span>$88</span>
+             </div>
+           </li>
+           <li class="mt-2">
+             <h1 class="font-md m-0">Real Kung Pao chicken</h1>
+             <div class="menu-item font-sm m-0">
+               <p>Peanuts, chicken tights, rice wine, cornflour, soy sauce, chillies</p>
+               <span>$35</span>
+             </div>
+           </li>
+         </ul>
 
 
 
-          <!-- <ul class="pl-0 m-3 tabcontent" id="#main">
-            <li class="mt-2">
-              <h1 class="font-md m-0">Dim Sums</h1>
-              <div class="menu-item font-sm m-0">
-                <p>Chestnuts, mushroom, spring onion, ginger, coriander</p>
-                <span>$88</span>
-              </div>
-            </li>
-          </ul>
+         <ul class="pl-0 m-3" id="main">
+          <li class="mt-2">
+            <h1 class="font-md m-0">Pao chicken</h1>
+            <div class="menu-item font-sm m-0">
+              <p>Peanuts, chicken tights, rice wine, cornflour, soy sauce, chillies</p>
+              <span>$35</span>
+            </div>
+          </li>
+          <li class="mt-2">
+            <h1 class="font-md m-0">Dim Sums</h1>
+            <div class="menu-item font-sm m-0">
+              <p>Chestnuts, mushroom, spring onion, ginger, coriander</p>
+              <span>$88</span>
+            </div>
+          </li>
+          <li class="mt-2">
+            <h1 class="font-md m-0">Real Kung Pao chicken</h1>
+            <div class="menu-item font-sm m-0">
+              <p>Peanuts, chicken tights, rice wine, cornflour, soy sauce, chillies</p>
+              <span>$35</span>
+            </div>
+          </li>
+          <li class="mt-2">
+            <h1 class="font-md m-0">Sums</h1>
+            <div class="menu-item font-sm m-0">
+              <p>Chestnuts, mushroom, ginger, coriander</p>
+              <span>$88</span>
+            </div>
+          </li>
+         </ul>
 
-          <ul class="pl-0 m-3 tabcontent" id="#dessert">
-            <li class="mt-2">
-              <h1 class="font-md m-0">Real Kung Pao chicken</h1>
-              <div class="menu-item font-sm m-0">
-                <p>Peanuts, chicken tights, rice wine, cornflour, soy sauce, chillies</p>
-                <span>$35</span>
-              </div>
-            </li>
-          </ul> -->
+         <ul class="pl-0 m-3" id="desserts">
+           <li class="mt-2">
+             <h1 class="font-md m-0">Real Kung Pao chicken</h1>
+             <div class="menu-item font-sm m-0">
+               <p>Peanuts, chicken tights, rice wine, cornflour, soy sauce, chillies</p>
+               <span>$35</span>
+             </div>
+           </li>
+         </ul>
+       </div>
       </div>
       
 
@@ -183,7 +212,7 @@
 
               </div>
               <div class="slider-content">
-                <img src="../images/coocking.jpg" alt="Sweet and sour pork">
+                <img src="../images/slider.jpg" alt="Sweet and sour pork">
                 <div class="dish-info">
                     <div class="likes"></div>
                     <h2>Sweet and sour pork</h2>
@@ -205,7 +234,7 @@
 
               </div>
               <div class="slider-content">
-                <img src="../images/coocking.jpg" alt="Sweet and sour pork">
+                <img src="../images/slider1.jpg" alt="Sweet and sour pork">
                 <div class="dish-info">
                     <div class="likes"></div>
                     <h2>Sweet and sour pork</h2>
@@ -227,7 +256,7 @@
 
               </div>
               <div class="slider-content">
-                <img src="../images/coocking.jpg" alt="Sweet and sour pork">
+                <img src="../images/slider2.jpg" alt="Sweet and sour pork">
                 <div class="dish-info">
                     <div class="likes"></div>
                     <h2>Sweet and sour pork</h2>
@@ -280,31 +309,36 @@
                       />
                     </div>
                     <div class="form-items">
-                      <label for="email" class="form-label"> Date </label>
+                      <label for="date" class="form-label"> Date </label>
                       <input
                         type="date"
                         name="date"
                         id="date"
-                        class="form-input"
+                        class="form-input custom-icon date"
                       />
                     </div>
                     <div class="form-items">
-                      <label for="email" class="form-label"> Time </label>
+                      <label for="time" class="form-label"> Time </label>
                       <input
                         type="time"
                         name="time"
                         id="time"
-                        class="form-input"
+                        class="form-input custom-icon time"
                       />
                     </div>
-                    <div class="form-items">
-                      <label for="email" class="form-label"> Number of people </label>
+                    <div class="form-items numeric-input">
+                      <label class="form-label"> Number of people </label>
+                      <button type="button" id="decrement" class="decrease-increase-btn decrease-btn">−</button> 
                       <input
-                        type="number"
+                        readonly
                         name="number"
-                        id="number"
                         class="form-input"
+                        value="1"
+                        min="1"
+                        id="numeric"
                       />
+                      <button type="button" id="increment" class="decrease-increase-btn increase-btn">+</button>
+
                       <div class="form-items">
                         <button class="book-btn">
                             Book now
@@ -317,8 +351,6 @@
             </div>
     </div>
  
-
-
   
     <div class="contact-us mt-7">
       <h1>Contact Us</h1>
@@ -354,7 +386,8 @@
   <script src="script.js"></script>
   <script src="scripts/slider.js"></script>
   <script src="scripts/navbar.js"></script>
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <script src="scripts/form.js"></script>
+  <script src="scripts/menu.js"></script>
 
   
 

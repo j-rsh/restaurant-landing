@@ -3,7 +3,7 @@
     background-color: antiquewhite;
     padding: 0.75rem 0;
     margin-top: 2rem;
-    background-color: var(--Primary-red, #D14800);
+    background-color: #D14800;
     border: none;
     color: white;
 }
@@ -11,3 +11,22 @@
 .book-btn:hover {
     box-shadow: 0px 3px 8px #f08c56;
   }
+
+.decrease-increase-btn{
+    position: absolute;
+    background: none;
+    border: none;
+    color:gray;
+    font-size:x-large;
+    font-weight: 400;
+    top: 19%;
+    z-index: 9;
+}
+
+.increase-btn{
+    left: 90%;
+    
+}
+.decrease-btn{
+    left: 0;
+}
