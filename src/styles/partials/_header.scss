@@ -1,126 +1,164 @@
+ @include navbar-layout(url('../../../images/banner5.jpg'),row,space-evenly,center,none);
 
+  .main-banner{
+   .header-title{
+      margin-top: 7rem;
+      h1{
+         font-size: large;
+       margin-top: 2rem;
+       font-weight: bold;
+      }
+      p{ 
+             font-size:large;
+      }
+      .header-btn{
+         display: flex;
+         justify-content: space-between;
+         gap: 1rem;
+         align-items: center;
+         flex-direction: row;
+         width: 30%;
+         margin: auto;
+         .book-btn{
+            margin-top: 0.5rem;
+         }
+      }
 
-  %navbar-layout {
-    background-image: url('../../../images/banner4.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: relative;
-    
-    .banner-content{
-        width: 100%;
-        position: absolute;
-        top: 5%;
-        color: white;
-     }
-     .navbar-content{
-        display: flex
-     }
+   }
 
-     .nav-links{
-        display: contents;
+   }
+   
 
-         ul{
-            display: flex;
-            justify-content: space-between;
-            padding-left: 0;
-            list-style:none
-        }
-     }
-    .main-title{
-       text-align: center;
-       width: 50%;
-       margin: auto;
-      
-    }
-    a{
-        text-decoration: none;
-        color: white
-    }
-      
-  }
+@include mq($from: tablet-small, $until: desktop-large){
 
-.main-banner{
+   @include navbar-layout(url('../../images/tablet-banner.png'),column,center,center,none);
  
-   @extend %navbar-layout;
    
+}
+
+@include mq($from: tablet-small, $until: tablet-large) {
+
+   .main-banner{
+
+      ul{
+         flex-direction: row;
+         gap: 0.75rem;
+         font-size: smaller;
+       
+      }
+      p{
+       font-size: smaller;
+      }
    
-    @include sm {
-     height: 64vh;
-     .navbar-content{
-        justify-content: space-between;
-        align-items: center;
-        margin: 1rem 2rem;
-     }
-     .nav-links{
+   }
+}
+@include mq($from: tablet-large, $until: desktop-large) {
+
+   .main-banner{
+
+      ul{
+         flex-direction: row;
+         gap: 1.25rem;
+         font-size: small;
+       
+      }
+      p{
+       font-size: smaller;
+      }
+      
+     
+   }
+}
+
+
+@include mq($from: mobile, $until: tablet-small){
+   @include navbar-layout(url('../../images/tablet-banner.png'),column,center,center,block);
+   .main-banner{
+   .banner-content{
+      top:0
+   }
+   .navbar-content{
+               flex-direction: row;
+               justify-content: space-between;
+               align-items: center;
+               .logo{
+                  width: 130px;
+                  height: 130px;
+               }
+               button{
+                  background: none;
+                  color: white;
+                  font-size: 2rem;
+                  border: none;
+               }
+            }
+
+   .nav-links {
       display: none;
-        background-color: beige;
-        position: absolute;
-         top: 0;
-         right: 0;
-         bottom: 0;
-         left: 0;
-        ul{
-            flex-direction: column;
-        }
-     }
-     .hambergur-menu{
-        display: block;
-     }
-    }
-    
-    @include md {
-     height: 62vh;
-     .navbar-content{
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.9);
+      justify-content: flex-start;
+      align-items: baseline;
+      z-index: 1000;
+
+      ul {
+        display: flex;
         flex-direction: column;
-        align-items: center;
-     }
-     .nav-links{
-        display: contents;
+        gap: 2rem;
+        font-size: 1.5rem;
+        text-align: left;
+        padding: 2rem;
+      }
 
-         ul{
-            width: 50%;
-            flex-direction: row;
+      li {
+        margin: 0;
+      }
 
-         }
-     }
-     h1{
-        font-size: x-large;
-        margin-top: 4rem;
-     }
-     p{ 
-            font-size: small;
-     }
-     .hambergur-menu{
-        display: none!important
+      a {
+        color: white;
+        text-decoration: none;
+      }
     }
-        
-    }
-    
-    @include lg {
-     height: 100vh;
-     .navbar-content{
-        flex-direction: row;
-        justify-content: space-evenly;
-        align-items: end;
-     }
-     .nav-links{
-        display: contents;
 
-         ul{
-            width: 27%;
-            flex-direction: row;
-         }
-     }
-     h1{
-        font-size: xxx-large;
-        margin-top: 8rem;
-     }
-     p{ 
-            font-size: medium;
-     }
-     .hambergur-menu{
-        display: none!important
+    .nav-links.active {
+      display: flex;
     }
-        
+    .close-menu {
+      display: block;
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: none;
+      border: none;
+      cursor: pointer;
     }
+.header-title{
+
+   margin-top: 4rem;
+   h1{
+      font-size: medium;
+      margin-top: 1rem;
+      font-weight: bold;
+  }
+  p{ 
+         font-size: x-small;
+  }
+  .header-btn{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+     width: 50%;
+     margin: auto;
+     .book-btn{
+      margin-top: 0.5rem;
+     }
+  }
+}
+}
+
 }

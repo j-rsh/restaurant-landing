@@ -26,3 +26,64 @@
   justify-content: space-between;
   align-items: center
 }
+
+@mixin tablet-specific-styles {
+  @include mq($from: tablet-small, $until: tablet-large) {
+    @content;
+  }
+  @include mq($from: tablet-large, $until: desktop) {
+    @content;
+  }
+
+}
+@mixin navbar-layout($background-image,$flex-direction,$justify-content,$align-items,$display) {
+  .main-banner{
+   background-image:$background-image ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    height: 100vh;
+
+    .banner-content{
+        width: 100%;
+        position: absolute;
+        top: 5%;
+        color: white;
+     }
+
+     .navbar-content{
+        display: flex;
+        flex-direction: $flex-direction;
+        justify-content: $justify-content;
+        align-items: $align-items;
+     }
+
+         ul{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 2rem;
+            font-size: 1.16rem;
+            padding-left: 0;
+            list-style:none;
+
+        }
+
+    .main-title{
+       text-align: center;
+       width: 50%;
+       margin: auto;
+      
+    }
+    a{
+        text-decoration: none;
+        color: white
+    }
+    .hambergur-menu{
+      display: $display
+  }
+  .close-menu{
+   display: none
+  }
+  }
+  }

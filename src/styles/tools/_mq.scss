@@ -38,10 +38,12 @@ $mq-responsive: true !default;
 /// @type Map
 /// @link https://github.com/sass-mq/sass-mq#seeing-the-currently-active-breakpoint Full documentation and examples
 $mq-breakpoints: (
-    mobile:  320px,
-    tablet:  740px,
-    desktop: 980px,
-    wide:    1300px
+    mobile: 0px,
+    tablet-small: 290px,
+    tablet-large:344px,
+    desktop-small: 615px,  
+    desktop-large: 918px
+
 ) !default;
 
 /// Static breakpoint (for fixed-width layouts)
@@ -128,6 +130,7 @@ $mq-media-type: all !default;
     } @else {
         @warn "Breakpoint #{$name} wasn't found in $breakpoints.";
     }
+    @return 0px;
 }
 
 /// Media Query mixin

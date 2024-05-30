@@ -59,7 +59,19 @@ footer {
   border-top: 0.0625rem solid gray; 
 }
 
-@include md {
+@include mq($from:desktop-small , $until:desktop-large){
+    .contact-us{
+        width: 90%;
+        .contact-info
+        {
+           .contact-item{
+                    margin: 0 0.75rem;
+           }
+        }
+}
+}
+
+@include mq($from:tablet-small , $until:desktop-small) {
   .contact-us {
       width: 90%;
 
@@ -84,7 +96,7 @@ footer {
       }
   }
 
-@include sm {
+@include mq($from:mobile , $until:tablet-small) {
   .contact-us {
       width: 100%;
       h1{

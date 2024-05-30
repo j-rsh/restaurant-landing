@@ -13,14 +13,17 @@
 .menu-list{
     border: 1px solid #8D8D8D;
     background: #181110;
-    width: 60%;
-    margin: 1rem auto;
+    width: 90%;
+    margin: auto;
+    margin-top: 4rem;
     color: white;
     .menu-header{
         @include flex-space;
         border-bottom:none;
         text-decoration: none;
         color: white;
+        margin: 3rem;
+
        
             a{
                 color: white;
@@ -34,8 +37,11 @@
             }
     }
 
-   .tab-content
-   { li{
+   .tab-content{
+   ul{
+    margin: 3rem;
+   }
+   li{
         border-bottom: 1px solid #8D8D8D;
 
     }
@@ -48,31 +54,67 @@
     
     }
     
-    .tab-content > ul {
-        display: none;
+    .tab-content {
+        ul{
+
+            display: none;
+            padding-left: 0;
+        }
     }
 
-    .tab-content > ul.active {
-        display: block;
+    .tab-content  {
+        ul.active{
+
+            display: block;
+        }
     }
   }
-  @include md{
+
+
+  @include mq($from:desktop-large)
+  {
+    .menu-list{
+        width: 60%;
+        .menu-header{
+        }
+    }
+  }
+
+@include mq($from:tablet-small , $until:desktop-small){
     .menu-list{
         width:90%;
-    }
-    .menu-header{
-        flex-direction: column;
-        align-items: center;
-        h1{
+        .menu-header{
+          flex-direction: column;
+          align-items: center;
+          h1{
             @include highlighted-underline(center,5rem);
           }
-    }
+        }
+        .menu-tab{
+          ul{
+            flex-direction: column;
+            align-items: center;
+            padding-left: 0;
+
+          }
+          .tab-content{
+            ul{
+                margin: 1rem;
+            }
+          }
+          
+        }
+        .menu-item{
+            gap:1rem
+        }
     
-  }
-  @include sm{
+}
+}
+  @include mq($from:mobile , $until:tablet-small){
     .menu-list{
         width:100%;
         text-align: center;
+        margin-top: 2rem;
         .menu-header{
           flex-direction: column;
           align-items: center;
@@ -93,6 +135,7 @@
             color: gray;
             padding-bottom: 0.5rem;
         }
+     
     }
  
   }

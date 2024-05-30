@@ -4,10 +4,11 @@
     background-repeat: no-repeat;
     position: relative;
     height: 100vh;
+    margin-top: 6rem;
 
     .form-banner-content{
         display: flex;
-        justify-content: space-around;
+        justify-content: space-evenly;
         color: white;
     }
     .form-card{
@@ -100,9 +101,8 @@ input[type="date"]::-webkit-calendar-picker-indicator ,
   padding-right: 12px;
 }
 
-@include md{
+@include mq($from:tablet-small , $until:desktop-small){
     .form-banner-content{
-        
         flex-direction: column;
         align-items: center;
 
@@ -118,7 +118,7 @@ input[type="date"]::-webkit-calendar-picker-indicator ,
 }
 }
 
-@include sm{
+@include mq($from:mobile , $until:tablet-small){
     .form-banner-content{
 
         flex-direction: column;

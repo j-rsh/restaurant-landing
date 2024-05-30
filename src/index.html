@@ -66,12 +66,14 @@
       <div class="main-banner">
         <nav  class="banner-content">
           <div class="navbar-content">
-            <img src="../images/restaurant.jpg"/>
-
-            <button data-collapse-toggle="menu" class="hambergur-menu">
-              <img src="../images/ham.svg" width="28" height="28"/>
+            <img src="../images/logo.png" class="logo"/>
+            <button data-collapse-toggle="menu" class="hambergur-menu pr-1">
+              <i class="fa fa-bars" aria-hidden="true" ></i>
             </button>
             <div class="nav-links" id="menu-links">
+              <button class="close-menu" id="close-menu">
+                <i class="fa fa-times" aria-hidden="true"></i>
+              </button>
               <ul>
                 <li> <a href="#">why us</a></li>
                 <li> <a href="#">menu</a></li>
@@ -80,15 +82,21 @@
                 <li> <a href="#">contact</a> </li>
               </ul>
             </div>
-
               
           </div>
-          <div class="main-title">
-            <h1>Book a table in the best 
-              Mexican restaturant</h1>
-              <p class="">30% off for the Christmas</p>
-          </div>
+            <div class="header-title">
+              <div class="main-title">
+                <h1>Book a table in the best 
+                  Mexican restaturant</h1>
+                  <p class="">30% off for the Christmas</p>
+              </div>
+              <div class="header-btn">
+                <button class="see-menu-btn" id="menuBtn"> see menu </button>
+                <button class="book-btn" id="bookBtn"> book now </button>
+            </div>
+            </div>
         </nav>
+      
       </div>
 
       <div class="card-container">
@@ -109,8 +117,9 @@
           </div>
       </div>
 
-      <div class="menu-list mt-7">
-        <div class="m-3 menu-header">
+
+      <div class="menu-list mt-7" id="menu">
+        <div class=" menu-header">
           <h1>Our menu</h1>
           <div class="menu-tab">
             <ul class="display-f">
@@ -122,7 +131,7 @@
         </div>
        <div class="tab-content">
 
-         <ul class="pl-0 m-3 " id="starter">
+         <ul class="pl-0 " id="starter">
            <li class="mt-2">
              <h1 class="font-md m-0">Dim Sums</h1>
              <div class="menu-item font-sm m-0">
@@ -155,7 +164,7 @@
 
 
 
-         <ul class="pl-0 m-3" id="main">
+         <ul class="pl-0" id="main">
           <li class="mt-2">
             <h1 class="font-md m-0">Pao chicken</h1>
             <div class="menu-item font-sm m-0">
@@ -186,7 +195,7 @@
           </li>
          </ul>
 
-         <ul class="pl-0 m-3" id="desserts">
+         <ul class="pl-0" id="desserts">
            <li class="mt-2">
              <h1 class="font-md m-0">Real Kung Pao chicken</h1>
              <div class="menu-item font-sm m-0">
@@ -204,11 +213,11 @@
             <div class="slider-cell">
               <div class="slider-title">
                 <h1>The Most Popular Dishes</h1>
-                <div class="slider-controls">
+                <!-- <div class="slider-controls">
                   <span class="prev">←</span>
                   <span class="slide-number">1 / 3</span>
                   <span class="next">→</span>
-              </div>
+              </div> -->
 
               </div>
               <div class="slider-content">
@@ -226,11 +235,11 @@
             <div class="slider-cell">
               <div class="slider-title">
                 <h1>The Most Popular Dishes</h1>
-                <div class="slider-controls">
+                <!-- <div class="slider-controls">
                   <span class="prev">←</span>
                   <span class="slide-number">1 / 3</span>
                   <span class="next">→</span>
-              </div>
+              </div> -->
 
               </div>
               <div class="slider-content">
@@ -248,11 +257,11 @@
             <div class="slider-cell">
               <div class="slider-title">
                 <h1>The Most Popular Dishes</h1>
-                <div class="slider-controls">
+                <!-- <div class="slider-controls">
                   <span class="prev">←</span>
                   <span class="slide-number">1 / 3</span>
                   <span class="next">→</span>
-              </div>
+              </div> -->
 
               </div>
               <div class="slider-content">
@@ -271,7 +280,7 @@
         
       </div>
 
-      <div class="customer-form mt-7">
+      <div class="customer-form" id="form">
         <div class="form-banner">
           <div class="form-banner-content">
             <div class="form-title mt-2">

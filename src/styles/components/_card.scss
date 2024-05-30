@@ -1,21 +1,9 @@
-@mixin flex-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  @mixin flex-space{
-    display: flex;
-    justify-content: space-between;
-    align-items: center
-  }
-  
-  .card-container {
+.card-container {
     @include flex-center;
     border: 1px solid #8D8D8D;
     background: #181110;
     width: 60%;
-    margin: 9rem auto;
+    margin: 2rem auto;
     color: white;
     height: 500px;
 
@@ -35,7 +23,7 @@
     padding: 20px;
     h2 {
       margin-bottom: 10px;
-        @include highlighted-underline(center,2rem);
+        @include highlighted-underline(left,2rem);
     }
   }
   
@@ -54,10 +42,16 @@
   }
 }
 
+  @include mq($from:desktop-small , $until:desktop-large){
+      .card-container{
+        width: 90%;
+        
+      }
+  }
   
-  
-  @include md {
+  @include mq($from:tablet-small , $until:desktop-small) {
    .card-container {
+    width: 90%;
       flex-direction: column;
       height: 100vh;
     
@@ -67,22 +61,25 @@
         
         h2{
             text-align: center;
-            @include highlighted-underline(center,12rem);
+            @include highlighted-underline(center,8rem);
         }
     }
     .card-image {
        flex-basis: auto;
        margin-top: 0;
+       img{
+        width: 100%;
+       }
      }
     
   }
   
-  @include sm {
+  @include mq($from:mobile , $until:tablet-small) {
     .card-container {
         flex-direction: column;
         height: 100%;
         width: 100%;
-        margin: 9rem 0;
+        margin: 0 0;
     }
     .card-content{
         margin: 1rem ;
