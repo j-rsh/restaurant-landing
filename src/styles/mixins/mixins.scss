@@ -67,6 +67,15 @@
             padding-left: 0;
             list-style:none;
 
+            a{
+              padding-bottom: 0.5rem;
+            }
+
+          li a.active {
+            border-bottom: 2px solid orangered; 
+          }
+
+
         }
 
     .main-title{
