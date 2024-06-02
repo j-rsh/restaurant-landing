@@ -2,19 +2,19 @@
 document.addEventListener('DOMContentLoaded', () => {
 	const hamburger = document.querySelector('.hambergur-menu');
 	const links = document.querySelector('.nav-links');
-	const x = document.querySelectorAll('.main-banner ul li a');
+	const linkStyle = document.querySelectorAll('.main-banner ul li a');
 
   
 	hamburger.addEventListener('click', () => {
-	  links.style.display = links.style.display === 'none'? 'flex' : 'none';
+	  links.style.display = links.style.display === 'none'? 'flelinkStyle' : 'none';
 	});
 	document.getElementById('close-menu').addEventListener('click', function() {
 		links.style.display ='none';
 	  });
 
-	  x.forEach(link => {
+	  linkStyle.forEach(link => {
         link.addEventListener('click', function(e) {            
-            x.forEach(link => link.classList.remove('active'));
+            linkStyle.forEach(link => link.classList.remove('active'));
             
             this.classList.add('active');
         });

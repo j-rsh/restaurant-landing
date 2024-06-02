@@ -11,30 +11,21 @@
       p{ 
              font-size:large;
       }
-      .header-btn{
-         display: flex;
-         justify-content: space-between;
-         gap: 1rem;
-         align-items: center;
-         flex-direction: row;
-         width: 30%;
-         margin: auto;
-         .book-btn{
-            margin-top: 0.5rem;
-         }
-      }
-
    }
-
    }
    
+@include header-btn(row,25%);
+
 
 @include mq($from: tablet-small, $until: desktop-large){
 
-   @include navbar-layout(url('../../images/tablet-banner.png'),column,center,center,none);
- 
-   
-}
+   @include navbar-layout(url('../../images/tablet-banner.jpg'),column,center,center,none);
+      
+         @include header-btn(row,60%)
+
+   }
+
+
 
 @include mq($from: tablet-small, $until: tablet-large) {
 
@@ -48,8 +39,7 @@
       }
       p{
        font-size: smaller;
-      }
-   
+      }      
    }
 }
 @include mq($from: tablet-large, $until: desktop-large) {
@@ -65,14 +55,12 @@
       p{
        font-size: smaller;
       }
-      
-     
    }
 }
 
 
 @include mq($from: mobile, $until: tablet-small){
-   @include navbar-layout(url('../../images/tablet-banner.png'),column,center,center,block);
+   @include navbar-layout(url('../../images/tablet-banner.jpg'),column,center,center,block);
    .main-banner{
    .banner-content{
       top:0
@@ -147,18 +135,8 @@
   p{ 
          font-size: x-small;
   }
-  .header-btn{
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     flex-direction: column;
-     width: 50%;
-     margin: auto;
-     .book-btn{
-      margin-top: 0.5rem;
-     }
-  }
 }
 }
+@include header-btn(column,50%)
 
 }

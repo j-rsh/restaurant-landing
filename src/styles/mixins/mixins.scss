@@ -27,15 +27,7 @@
   align-items: center
 }
 
-@mixin tablet-specific-styles {
-  @include mq($from: tablet-small, $until: tablet-large) {
-    @content;
-  }
-  @include mq($from: tablet-large, $until: desktop) {
-    @content;
-  }
 
-}
 @mixin navbar-layout($background-image,$flex-direction,$justify-content,$align-items,$display) {
   .main-banner{
    background-image:$background-image ;
@@ -95,4 +87,21 @@
    display: none
   }
   }
+  }
+
+  @mixin header-btn($flex-direction:row,$width){
+    .main-banner{
+
+      .header-title{
+        .header-btn{
+          display: flex;
+          justify-content: space-between;
+          gap: 1rem;
+          align-items: center;
+          flex-direction: $flex-direction;
+          width: $width;
+          margin: auto;
+        }
+      }
+    }
   }
