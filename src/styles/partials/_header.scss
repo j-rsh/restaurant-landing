@@ -1,10 +1,12 @@
- @include navbar-layout(url('../../../images/banner5.jpg'),row,space-evenly,center,none);
+ @include navbar-layout(url('../../../images/banner5.webp'),row,space-evenly,center,none);
 
   .main-banner{
    .header-title{
-      margin-top: 7rem;
+      
+      margin-top: 4rem;
+
       h1{
-         font-size: large;
+         font-size: x-large;
        margin-top: 2rem;
        font-weight: bold;
       }
@@ -19,7 +21,7 @@
 
 @include mq($from: tablet-small, $until: desktop-large){
 
-   @include navbar-layout(url('../../images/tablet-banner.jpg'),column,center,center,none);
+   @include navbar-layout(url('../../images/tablet-banner.webp'),column,center,center,none);
       
          @include header-btn(row,60%)
 
@@ -30,6 +32,7 @@
 @include mq($from: tablet-small, $until: tablet-large) {
 
    .main-banner{
+      height: 90vh;
 
       ul{
          flex-direction: row;
@@ -60,8 +63,9 @@
 
 
 @include mq($from: mobile, $until: tablet-small){
-   @include navbar-layout(url('../../images/tablet-banner.jpg'),column,center,center,block);
+   @include navbar-layout(url('../../images/mobile-banner.webp'),column,center,center,block);
    .main-banner{
+      height: 90vh;
    .banner-content{
       top:0
    }

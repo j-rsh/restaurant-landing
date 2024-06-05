@@ -105,7 +105,8 @@ function styles() {
     // .pipe(sass().on('error', sass.logError))
     .pipe($.autoprefixer(AUTOPREFIXER_BROWSERS))
     .pipe($.size({ title: 'styles' }))
-    .pipe(dest('.tmp/styles'));
+    .pipe(dest('.tmp/styles'))
+    .pipe(dest('dist/styles'));
 }
 
 exports.styles = styles;
@@ -118,7 +119,8 @@ function scripts() {
       // Note: Since we are not using useref in the scripts build pipeline,
       //       you need to explicitly list your scripts here in the right order
       //       to be correctly concatenated
-      './src/scripts/main.js'
+      './src/scripts/**/*.js',
+      './src/scripts/main.js',
       // Other scripts
     ])
     .pipe($.newer('.tmp/scripts'))
@@ -281,6 +283,7 @@ function ziprelease() {
 exports.ziprelease = ziprelease;
 
 
+// Build production files, the default task
 // Build production files, the default task
 exports.default = series(clean, styles, lint, html, scripts, images, copy, fonts, zip);
 

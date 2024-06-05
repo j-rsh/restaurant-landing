@@ -10,7 +10,7 @@
       bottom: 0;
       width: 2.125rem;
       height: 0.125rem;
-      background-color: orangered;
+      background-color: $darkorange;
       transform: translateX(-50%);
   }
 }
@@ -34,7 +34,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
-    height: 100vh;
+    height: 80vh;
 
     .banner-content{
         width: 100%;
@@ -64,7 +64,7 @@
             }
 
           li a.active {
-            border-bottom: 2px solid orangered; 
+            border-bottom: 5px solid $darkorange; 
           }
 
 
@@ -80,7 +80,7 @@
         text-decoration: none;
         color: white
     }
-    .hambergur-menu{
+    .hamburger-menu{
       display: $display
   }
   .close-menu{

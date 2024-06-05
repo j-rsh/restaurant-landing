@@ -1,5 +1,5 @@
 .form-banner{
-    background-image: url('../../../images/banner10.jpg');
+    background-image: url('../../../images/banner10.webp');
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
@@ -15,7 +15,7 @@
     width: 25%;
     padding:2rem;
     border: 1px solid #8D8D8D;
-    background: #181110;
+    background: $darkbrown;
     color: #ffff;
     margin-top: -2.5rem;
     }
@@ -27,6 +27,7 @@
     margin: 0 auto;
     margin-bottom: 1rem;
 }
+
 
 .form-title{
     width: 354px;
@@ -59,6 +60,14 @@
     outline: none;
     resize: none;
     position: relative;
+    &.invalid {
+        border-color: red; 
+      }
+    
+      &:focus {
+        border-color: #4c4c4e;
+        box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+      }
 }
 input[type="date"]::-webkit-calendar-picker-indicator ,
     input[type="time"]::-webkit-calendar-picker-indicator {
@@ -79,10 +88,6 @@ input[type="date"]::-webkit-calendar-picker-indicator ,
 .time::before{
     content: "\f017";
 }
-.form-input:focus {
-  border-color: #4c4c4e;
-  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
-}
 
 .numeric-input{
     position: relative;
@@ -100,7 +105,23 @@ input[type="date"]::-webkit-calendar-picker-indicator ,
   padding-right: 12px;
 }
 
+.form-items input:valid {
+  border-color: green;
+}
+
+.error-message {
+  color: red;
+  display: none;
+}
+
+.form-items input:invalid ~ .error-message {
+  display: block;
+}
+
+
 @include mq($from:tablet-small , $until:desktop-small){
+  .form-banner{
+    margin: 2rem 1rem;
     .form-banner-content{
         flex-direction: column;
         align-items: center;
@@ -115,9 +136,12 @@ input[type="date"]::-webkit-calendar-picker-indicator ,
         @include highlighted-underline(center,6rem);
       }
 }
+  }
 }
 
 @include mq($from:mobile , $until:tablet-small){
+  .form-banner{
+    margin-top: 2rem;
     .form-banner-content{
 
         flex-direction: column;
@@ -143,4 +167,6 @@ input[type="date"]::-webkit-calendar-picker-indicator ,
       }
 
 }
+  }
 }   
+  

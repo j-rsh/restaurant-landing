@@ -12,10 +12,10 @@
 
 .menu-list{
     border: 1px solid #8D8D8D;
-    background: #181110;
+    background: $darkbrown;
     width: 90%;
     margin: auto;
-    margin-top: 4rem;
+    margin-top: 6rem;
     color: white;
     .menu-header{
         @include flex-space;
@@ -75,13 +75,14 @@
   {
     .menu-list{
         width: 60%;
-        .menu-header{
-        }
+        margin-top: 4rem;
+     
     }
   }
 
 @include mq($from:tablet-small , $until:desktop-small){
     .menu-list{
+      margin-top: 7rem;
         width:90%;
         .menu-header{
           flex-direction: column;

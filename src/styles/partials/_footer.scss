@@ -43,7 +43,7 @@
 .open-hours {  
   h2 {
       margin: 0;
-      color: orangered;
+      color: $darkorange;
       font-size: 0.75rem;
   }
 
@@ -74,9 +74,10 @@ footer {
 @include mq($from:tablet-small , $until:desktop-small) {
   .contact-us {
       width: 90%;
+      margin-top: 10rem;
 
       h1{
-        @include highlighted-underline(center,6rem);
+        @include highlighted-underline(center,39%);
       }
       }
 
@@ -99,6 +100,7 @@ footer {
 @include mq($from:mobile , $until:tablet-small) {
   .contact-us {
       width: 100%;
+      margin-top: 8rem;
       h1{
         padding-top: 2rem;
         @include highlighted-underline(center,9rem);
